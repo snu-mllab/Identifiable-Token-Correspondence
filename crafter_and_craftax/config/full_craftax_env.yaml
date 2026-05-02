@@ -1,0 +1,22 @@
+ckpt_path: "ckpt/full_craftax_env"
+ckpt_steps: [50000, 500000, 1000000]
+env_config:
+  env_type: craftax_full
+token_config:
+  params:
+    patch_size: 10
+    grid_row: 13
+    grid_col: 11
+wm_config:
+  params:
+    tokens_per_block: 144
+    n_positions: 2880
+    use_absolute_embedding: true
+    use_spatio_temporal: true
+  num_dummy: 143
+  distance_coef: 0.6
+  trash_cost: 0.3
+  decode_strategy: sinkhorn
+replay_buffer_size: 48000
+batch_size: 16
+warmup_interactions: 50000

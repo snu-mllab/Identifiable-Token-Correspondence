@@ -1,0 +1,13 @@
+ckpt_path: "ckpt/itc"
+ckpt_steps: [50000, 500000, 1000000]
+wm_config:
+  params:
+    use_absolute_embedding: true
+    use_spatio_temporal: true
+  num_dummy: 81
+  distance_coef: 0.6
+  trash_cost: 0.3
+  decode_strategy: sinkhorn
+ac_config:
+  num_imagination_updates: 300
+warmup_interactions: 50000

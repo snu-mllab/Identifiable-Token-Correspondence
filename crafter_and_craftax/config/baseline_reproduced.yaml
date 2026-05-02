@@ -1,0 +1,2 @@
+ckpt_path: "ckpt/baseline_reproduced"
+ckpt_steps: [50000, 500000, 1000000]

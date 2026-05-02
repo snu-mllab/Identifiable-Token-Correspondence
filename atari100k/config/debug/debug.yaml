@@ -1,0 +1,13 @@
+wandb:
+  mode: "disabled"
+  
+training:
+  tokenizer:
+    start_after_epochs: 0
+    steps_per_epoch: 5
+  world_model:
+    start_after_epochs: 0
+    steps_per_epoch: 5
+  actor_critic:
+    start_after_epochs: 0
+    steps_per_epoch: 5

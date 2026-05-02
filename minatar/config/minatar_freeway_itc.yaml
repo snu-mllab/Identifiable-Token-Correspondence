@@ -1,0 +1,29 @@
+ckpt_steps: [50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000, 550000, 600000, 650000, 700000, 750000, 800000, 850000, 900000, 950000, 1000000]
+env_config:
+  env_type: minatar
+  env_name: Freeway-MinAtar
+token_config:
+  params:
+    patch_size: 2
+    patch_channels: 7
+    grid_row: 5
+    grid_col: 5
+wm_config:
+  reward_loss_coef: 10.0
+  termination_loss_coef: 10.0
+  num_dummy: 25
+  distance_coef: 0.2
+  trash_cost: 0.05
+  decode_strategy: sinkhorn
+  num_updates: 2000
+  params:
+    tokens_per_block: 26
+    n_positions: 520
+    use_absolute_embedding: true
+    use_spatio_temporal: true
+ac_config:
+  num_imagination_updates: 2000
+  gamma: 0.95
+  ld: 0.75
+  tgt_discount: 0.925
+  ent_loss_coef_imagination: 0.05
